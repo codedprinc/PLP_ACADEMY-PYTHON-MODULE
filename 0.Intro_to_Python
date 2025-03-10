@@ -1,0 +1,45 @@
+# Basic Calculator Program
+
+# Create a simple Python program that asks the user to input two numbers and a mathematical operation (addition, subtraction, multiplication, or division).
+# Perform the operation based on the user's input and print the result.
+# Example: If a user inputs 10, 5, and +, your program should display 10 + 5 = 15.
+
+print("============== Basic Calculator ============== \n")
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+op = input("Choose which mathematical operation to use(+, -, *, /): ")
+
+  
+if '.' in num1:
+    num1 = float(num1)
+else:
+    num1 = int(num1)
+
+ 
+if '.' in num2:
+    num2 = float(num2)
+else:
+    num2 = int(num2)
+    
+
+    
+if op == '+':
+    ans = num1 + num2
+    print(f"{num1} + {num2} = {ans}")
+elif op == '-':
+    ans = num1 - num2
+    print(f"{num1} - {num2} = {ans}")
+elif op == '*':
+    ans = num1 * num2
+    print(f"{num1} * {num2} = {ans}")
+elif op == '/':
+    if num2 == 0 or num2 == 0.0:
+        print("Error: Division by zero is not allowed.")
+    else:
+        ans = num1 / num2
+        print(f"{num1} / {num2} = {ans}")
+else:
+    print('Please follow instructions')
+    
+    
+print("==============                ============== \n")
